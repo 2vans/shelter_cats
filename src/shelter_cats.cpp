@@ -10,6 +10,10 @@
 using namespace std;
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	int space_count;
+
+	cout << "How much space do you have in shelter?" << endl;
+	cin >> space_count;
+	cout << "Space for cats: " << space_count << endl;
 	return 0;
 }
