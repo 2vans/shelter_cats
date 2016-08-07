@@ -42,13 +42,13 @@ int main() {
 			cout << "Space for cats: " << space_count - cats_number << endl;
 			cout << endl;
 			cout << "1. Name:" << endl;
-			cin >> cat_database[0][0];
+			cin >> cat_database[cats_number][0];
 			cout << "2. Age:" << endl;
-			cin >> cat_database[0][1];
+			cin >> cat_database[cats_number][1];
 			cout << "3. Vaccines" << endl;
-			cin >> cat_database[0][2];
+			cin >> cat_database[cats_number][2];
 			cout << "4. Description" << endl;
-			cin >> cat_database[0][3];
+			cin >> cat_database[cats_number][3];
 			//incrising number of cats
 			cats_number++;
 
@@ -56,14 +56,18 @@ int main() {
 
 		if (menu_choice == 3) {
 			for (int i = 0; i < cats_number; i++) {
-			for(int j = 0; j <3)
+				for (int j = 0; j < 3; j++) {
+					cout << cat_database[i][j] << " " << flush;
+				}
+				cout << endl;
+			}
+			cout << endl;
+		}
+
+		if (menu_choice == 4) {
+			//exit the program
+			exit = true;
 		}
 	}
-
-	if (menu_choice == 4) {
-		//exit the program
-		exit = true;
-	}
-}
-return 0;
+	return 0;
 }
