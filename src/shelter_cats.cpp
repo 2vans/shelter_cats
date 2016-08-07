@@ -13,6 +13,7 @@ int main() {
 	int space_count;
 	int menu_choice;
 	int cats_number = 0;
+	string delete_choice;
 
 	bool exit = false;
 
@@ -53,10 +54,27 @@ int main() {
 			cats_number++;
 
 		}
+		// kasowanie ostatniego kota
+		if (menu_choice == 2) {
+			cout
+					<< "Are you sure that you want to remove last added cat? (y/n)";
+			cin >> delete_choice;
+			if (delete_choice == "y") {
+
+				for (int j = 0; j < 4; j++) {
+					cat_database[cats_number][j] = "NULL";
+
+				}
+				cats_number--;
+			} else if (delete_choice == "y") {
+				cout << "Deletind stops." << endl;
+			} else {
+			}
+		}
 
 		if (menu_choice == 3) {
 			for (int i = 0; i < cats_number; i++) {
-				for (int j = 0; j < 3; j++) {
+				for (int j = 0; j < 4; j++) {
 					cout << cat_database[i][j] << " " << flush;
 				}
 				cout << endl;
