@@ -21,7 +21,7 @@ int main() {
 	cout << "How much space do you have in shelter?" << endl;
 	cin >> space_count;
 	// Creates database with amount you submitted
-	string cat_database[space_count - 1][3];
+	string cat_database[space_count - 1][4];
 
 	//main loop
 	while (!exit) {
@@ -50,10 +50,11 @@ int main() {
 			cin >> cat_database[cats_number][2];
 			cout << "4. Description" << endl;
 			cin >> cat_database[cats_number][3];
+
 			//incrising number of cats
 			cats_number++;
 
-		}
+		} else
 		// kasowanie ostatniego kota
 		if (menu_choice == 2) {
 			cout
@@ -70,7 +71,7 @@ int main() {
 				cout << "Deletind stops." << endl;
 			} else {
 			}
-		}
+		} else
 
 		if (menu_choice == 3) {
 			for (int i = 0; i < cats_number; i++) {
@@ -80,11 +81,12 @@ int main() {
 				cout << endl;
 			}
 			cout << endl;
-		}
+		} else
 
 		if (menu_choice == 4) {
 			//exit the program
 			exit = true;
+		} else {
 		}
 	}
 	return 0;
